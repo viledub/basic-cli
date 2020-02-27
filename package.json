@@ -1,0 +1,23 @@
+{
+  "name": "basic-cli",
+  "version": "1.0.0",
+  "description": "Stuff",
+  "main": "server.js",
+  "dependencies": {
+    "ajv": "^6.12.0",
+    "chalk": "^3.0.0",
+    "jasmine": "^3.5.0"
+  },
+  "devDependencies": {
+    "jasmine-json-test-reporter": "^1.0.0-beta"
+  },
+  "scripts": {
+    "test_all": "node spec/api/api.config.js type=all",
+    "test_reg": "node spec/api/api.config.js type=regression",
+    "test_api_new": "node spec/api/api.config.js type=new",
+    "test_api_smoke": "node spec/api/api.config.js type=smoke",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
