@@ -6,7 +6,10 @@
   "dependencies": {
     "ajv": "^6.12.0",
     "chalk": "^3.0.0",
-    "jasmine": "^3.5.0"
+    "jasmine": "^3.5.0",
+    "jasmine-reporters": "^2.3.2",
+    "jasmine-xml-reporter": "^1.2.1",
+    "junitxml-to-javascript": "^1.1.4"
   },
   "devDependencies": {
     "jasmine-json-test-reporter": "^1.0.0-beta"

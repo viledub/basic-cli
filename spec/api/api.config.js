@@ -1,5 +1,6 @@
 var Jasmine = require('jasmine');
 var JSONReporter = require('jasmine-json-test-reporter');
+var reporters = require('jasmine-reporters');
 var jasmine = new Jasmine();
 var { hasTag, hasString, createSpecFilter } = require('./utils.js')
 
@@ -8,6 +9,13 @@ jasmine.addReporter(new JSONReporter({
     beautify: true,
     indentationLevel: 4 // used if beautify === true
 }));
+
+
+var junitReporter = new reporters.JUnitXmlReporter({
+    savePath: '.',
+    filePrefix: 'junit'
+});
+jasmine.addReporter(junitReporter);
 
 
 let testType = "api"; // default to api

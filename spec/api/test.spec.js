@@ -27,11 +27,20 @@ describe("suite 1", ()=>{
 
 	it("something that should work", () => {
 		console.log("I am a regular regression test")
+		expect("a").toEqual("a", "well")
 	});
 });
 describe("suite 77", ()=>{
 	it("other thing entirely", () => {
 		console.log("I am a regular regression test")
 		fail('dunno');
+	});
+	describe("suite 77", ()=>{
+		it("a nested test", () => {
+			console.log("I am a nested regular regression test")
+		});	
+	});
+	it("something that should also work", () => {
+		console.log("I am a regular regression test")
 	});
 });
